@@ -1,0 +1,27 @@
+{
+  "name": "responsebot",
+  "version": "1.0.0",
+  "description": "this bot will (eventually) read old messages and responds at random times with them. this sounds dumb but it can be really funny at times.  inspiration from GenAi",
+  "main": "src/bot.js",
+  "scripts": {
+    "test": "node ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MalcolmMc23/ResponseBot.git"
+  },
+  "keywords": [],
+  "author": "Malcolm McDonald",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MalcolmMc23/ResponseBot/issues"
+  },
+  "homepage": "https://github.com/MalcolmMc23/ResponseBot#readme",
+  "dependencies": {
+    "@discordjs/rest": "^1.5.0",
+    "chalk": "^4.1.2",
+    "discord-api-types": "^0.37.27",
+    "discord.js": "^14.7.1",
+    "dotenv": "^16.0.3"
+  }
+}
