@@ -15,7 +15,7 @@ module.exports = (client) => {
             const { commands, commandArray } = client
             for (const file of commandFiles) {
                 const command = require('../../commands/' + folder + '/' + file)
-                // commands.set(command.data.name, command)
+                commands.set(command.data.name, command)
                 // commandArray.push(command, command.data.toJSON())
                 commandArray.push(command.data.toJSON())
                 console.log('Command: ' + command.data.name + 'has been past through the handler')
@@ -24,15 +24,15 @@ module.exports = (client) => {
         const clientId = '929620006457720862';
         const guildId = '929620373400592384';
         // const rest = new REST({ version: "10" }).setToken(process.env.token)
-        const rest = new REST({ version: '10' }).setToken(process.env);
+        const rest = new REST({ version: '10' }).setToken(process.env.token);
 
 
         try {
             console.log("Start crefreshing application (/) commands.");
 
-            console.log("  $$$$$$$$$" + Routes.applicationGuildCommands(clientId, guildId))
+            // console.log("  $$$$$$$$$" + Routes.applicationGuildCommands(clientId, guildId))
 
-            const data = await rest.put(
+            await rest.put(
                 Routes.applicationGuildCommands(clientId, guildId),
                 { body: client.commandArray },
             );
